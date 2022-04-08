@@ -20,7 +20,7 @@ app.get('/*', (req, res) =>
     res.sendFile('index.html', {root: rootDir}),
 );
 
-const port = process.eventNames.PORT || 8080
+const port = process.env.PORT || 8080
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
